@@ -1,0 +1,142 @@
+.fuente1{
+  color:#6886C5 !important;
+  font-family: 'Pacifico', cursive;
+}
+.fuente2{
+  color:#6886C5;
+  font-family: 'Lato', sans-serif;
+  font-size:20px;
+}
+
+.imgright{
+  text-align:right;
+  position:absolute;
+ margin-left: 50vw;
+}
+
+
+.fuenteLogo{
+  color:#4B4B4B !important;
+  font-family: 'Pacifico', cursive;
+}
+
+.fuenteNavbar{
+  color:#4B4B4B !important;
+  font-family: 'Lato', sans-serif;
+
+  margin-right: 2vh;
+}
+
+.centerLogo{
+  margin-top: 1vh;
+  margin-left: 2vh;
+}
+
+.canasta{
+  background-color:#6886C5;
+  border-radius: 32px;
+  border: none;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size:15px;
+  height: 40px;
+  width: 100px;
+}
+
+.sticky{
+  position: -webkit-sticky;
+  position: sticky; z-index:3;
+  top: 0px;
+}
+
+.fuenteSlide{
+  font-family: 'Lato', sans-serif;
+  color:#6886C5;
+}
+
+
+body{
+
+  background-size: cover;
+  
+}
+h1{
+  color: #6886C5;
+  font-family: 'Pacifico', cursive;
+}
+
+.estiloForms{
+  width: 70%;
+  background-color: #F4F9FF;
+  border-radius: 32px;
+  padding: 15px;
+  border: 0;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+
+.estiloBtn{
+  background-color: #6886C5;
+  border-radius: 32px;
+  width: 30%;
+  color: #F4F9FF;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border: 0;
+  font-size: 15px;
+  padding: 15px;
+
+}
+
+label{
+  font-family: 'Lato', sans-serif;
+  color: #6886C5;
+}
+
+.limiter{
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
+
+.separator{
+  padding: 50px;
+}
+
+/* label color */
+.input-field label {
+  color: #6886C5;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: #6886C5;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #6886C5;
+  box-shadow: 0 1px 0 0 #6886C5;
+}
+/* valid color */
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #6886C5;
+  box-shadow: 0 1px 0 0 #6886C5;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid #6886C5;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #6886C5;
+}
+
+.bodyRegister{
+  margin: 50px;
+  padding: 5px;
+  background-image: url("/rsrcs/bgRegistro.png");
+  background-size: cover;
+}
+
+.h1Register{
+  color: #6886C5;
+  font-family: 'Pacifico', cursive;
+}
