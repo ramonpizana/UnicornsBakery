@@ -8,17 +8,45 @@ function addItem(item){
   itemsContainer.innerHTML += itemHTML;
 }
 
-addItem({'name':'Macarron',
+  addItem({'name':'Macarron',
   'img':'/rsrcs/productos/maca.jpg',
-  'description':'Delicioso macarron de manzana con fresa'});
+  'description':'chacarron macarron'});
 
-  addItem({'name':'Pastel',
-  'img':'/rsrcs/productos/pastel.jpg',
-  'description':'Pastel 3 leches ultra delicioso'});
+  addItem({'name':'Tarta',
+  'img':'/rsrcs/productos/tarta.jpg',
+  'description':'pos una tarta :3'});
+
+  addItem({'name':'Donas',
+  'img':'/rsrcs/productos/dona.jpg',
+  'description':'el que rellena las donas del centro ta bien rico'});
 
   addItem({'name':'Pay',
   'img':'/rsrcs/productos/pay.jpg',
-  'description':'Super mega pay ultra barato y rico'});
+  'description':'no c jaja'});
+
+  addItem({'name':'Cake pops',
+  'img':'/rsrcs/productos/cakepops.jpg',
+  'description':'no confundir con kpop'});
+
+  addItem({'name':'Mil hojas',
+  'img':'/rsrcs/productos/milhojas.jpg',
+  'description':'mil hojaaas, como un perro'});
+
+  addItem({'name':'Mousse',
+  'img':'/rsrcs/productos/mousse2.jpg',
+  'description':'como el postre, no la banda'});
+
+  addItem({'name':'roles',
+  'img':'/rsrcs/productos/roles.jpg',
+  'description':'como los de Ivonne'});
+
+  addItem({'name':'Pastel',
+  'img':'/rsrcs/productos/pblanco.jpg',
+  'description':'noooooo donde te sentaste'});
+
+
+
+
 
 
 
