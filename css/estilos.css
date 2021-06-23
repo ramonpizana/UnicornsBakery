@@ -212,3 +212,47 @@ label{
   
 }
 
+@media (max-width:1800px){
+  .producto{
+    display: inline-block;
+    margin: 3em; 
+    width: 400px;
+    height: 500px;
+  }
+  
+  
+  #list-items{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  
+  .imgProducto{
+    width: 400px;
+    height: 275px;
+    border-radius:25px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  
+  .producto h5{
+    color: #6886C5;
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+  }
+  
+  .producto p{
+    font-family: 'Lato', sans-serif;
+    color: #6886C5;
+    font-size:20px;
+  }
+  
+}
+
+.bgProductos{
+  background-image: url(/rsrcs/pattern.png);
+  width: 100%;
+}
+
+.searchStyleBig{
+  background-color:#FFE0AC;
+  
+}
