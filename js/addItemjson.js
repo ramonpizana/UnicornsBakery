@@ -6,7 +6,7 @@ function addItem(item){
  '   </div>\n';
   const itemsContainer = document.getElementById("list-items");
   itemsContainer.innerHTML += itemHTML;
-}
+} 
 
   addItem({'name':'Macarron',
   'img':'/rsrcs/productos/maca.jpg',
