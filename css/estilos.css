@@ -149,6 +149,7 @@ label{
   margin: 3em; 
   width: 400px;
   height: 500px;
+  object-fit: cover;
 }
 
 
@@ -162,6 +163,7 @@ label{
   height: 275px;
   border-radius:25px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  object-fit: cover;
 }
 
 .producto h5{
@@ -182,7 +184,9 @@ label{
     display: inline-block;
     margin-left: 4vw;
     width: 500px;
-    height: 600px;
+    height: 500px;
+    
+    object-fit: cover;
   }
   
   
@@ -196,6 +200,7 @@ label{
     height: 375px;
     border-radius:25px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    object-fit: cover;
   }
   
   .producto h5{
@@ -218,6 +223,8 @@ label{
     margin: 3em; 
     width: 400px;
     height: 500px;
+   
+    object-fit: cover;
   }
   
   
@@ -231,6 +238,7 @@ label{
     height: 275px;
     border-radius:25px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    object-fit: cover;
   }
   
   .producto h5{
@@ -248,8 +256,7 @@ label{
 }
 
 .bgProductos{
-  background-image: url(/rsrcs/pattern.png);
-  width: 100%;
+  background-color: #F9F7F1;
 }
 
 .searchStyleBig{

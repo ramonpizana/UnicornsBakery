@@ -21,7 +21,7 @@
 
 
 
-<body>
+<body class="bgProductos">
   <!--Navbar-->
   <div class="sticky">
   <nav class="materialize-red lighten-4 fuenteLogo">
@@ -37,26 +37,92 @@
   </nav>
 </div>
 <!--Navbar-->
+<!--Search-->
+<nav class="searchStyleBig">
+  <div class="nav-wrapper ">
+    <form>
+      <div class="input-field">
+        <input id="search" type="search" required>
+       <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+        <i class="material-icons">close</i>
+      </div>
+    </form>
+  </div>
+</nav>
 
 <!--Contenido-->
 
+<div class="container">
+
+  <!--   slideshow   -->
   
+    <div style="width:70vw">
+      
+        <div class="carousel carousel-slider center" id="demo-carousel">
+          <div class="carousel-fixed-item center"></div>
+          
+
+          <!--Paquete loc enes-->
+
+          <div class="carousel-item fuente1 " href="#one!">
+            <div class="row" style="margin-top: 15vh; margin-left: 10vw;">
+              <div class="col s4"><img class="circle" src="/rsrcs/productos/cenaPromo.png" style="width: 250px; height: 250px"></div>
+              <div class="col s5">
+            <h2 style="font-size:40px">Paquete lo cenes</h2>
+            <p class="fuenteSlide" style="font-size:20px">Una tarta de frutos rojos y 10 piezas de macarrons por: $500 </p>
+              </div>
+          </div>
+          </div>
+
+          <!--Paquete emparejes-->
+
+          <div class="carousel-item fuente1 " href="#two!">
+            <div class="row" style="margin-top: 15vh; margin-left: 10vw;">
+              <div class="col s4"><img class="circle" src="/rsrcs/productos/parejaPromo.png" style="width: 250px; height: 250px"></div>
+              <div class="col s5">
+            <h2 style="font-size:40px">Paquete emparejes</h2>
+            <p class="fuenteSlide" style="font-size:20px">2 piezas de mil hojas y 2 roles de canela por: $100</p>
+              </div>
+          </div>
+          </div>
+
+          <!--Paquete children-->
+
+          <div class="carousel-item fuente1 " href="#two!">
+            <div class="row" style="margin-top: 15vh; margin-left: 10vw;">
+              <div class="col s4"><img class="circle" src="/rsrcs/productos/kidsPromo.png" style="width: 250px; height: 250px"></div>
+              <div class="col s5">
+            <h2 style="font-size:40px">Paquete children</h2>
+            <p class="fuenteSlide" style="font-size:20px">10 cake pops y 10 galletas por: $80</p>
+              </div>
+          </div>
+          </div>
+            </div>
+            </div>   
+          
+        
+    </div>
+  </div>
+</div>
+
+<br>
+
+<center>
+<a href="/html/productos.html"><h5 style=" color:#6886C5;
+  font-family: 'Pacifico', cursive;">Si quieres conocer más de nuestros productos haz click aquí</h5></a>
+</center>
+<br>
+<br>
 
 
+<h2 style="margin-left: 2vw;" class="fuente1">Novedades</h2> <hr>
 
-<h1 class="fuente1">Inicio</h1>
-
-
-<p class="fuente2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi commodi praesentium possimus beatae hic, quasi tempora vel ipsam iste, corrupti veritatis neque cupiditate obcaecati ab repudiandae, dignissimos provident eveniet voluptatem.</p>
-
-<p class="fuente2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi commodi praesentium possimus beatae hic, quasi tempora vel ipsam iste, corrupti veritatis neque cupiditate obcaecati ab repudiandae, dignissimos provident eveniet voluptatem.</p>
-
-<p class="fuente2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi commodi praesentium possimus beatae hic, quasi tempora vel ipsam iste, corrupti veritatis neque cupiditate obcaecati ab repudiandae, dignissimos provident eveniet voluptatem.</p>
-
-
-
-
-
+<center>
+  <div id = "list-itemsN">
+   
+  </div>
+  </center>
+ 
 
 <!--Contenido-->
 
@@ -105,5 +171,6 @@
   <script src="/js/materialize.js"></script>
   <script src="/js/init.js"></script>
   <script src="/js/main.js"></script>
+  <script src="/js/addItemNovedades.js"></script>
   </body>
 </html>
