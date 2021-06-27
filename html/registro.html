@@ -33,7 +33,9 @@
   </div>
   <!--Navbar-->
 
-
+  <!--Parallax Container-->
+  <div id="index-banner" class="parallax-container">
+  <!--Parallax Container-->
 
     <!--Contenido-->
     <center>
@@ -44,34 +46,81 @@
 
     <div class="row">
    <form action="" onsubmit="crear()" class="col s6 offset-s3"> 
-    <label for="email">correo electronico</label><br>
-    <div class="estiloForms">
-    <input type="email" id="email" name="email" required><br></div>
 
-    <label for="user">nombre de usuario</label><br>
-    <div class="estiloForms">
-    <input type="text" class="estiloForms" id="user" name="user"  required><br></div>
+    <div class="row limiter">
+      <form class="col s12">
+        <div class="row">
+          
+          <div class="input-field col s12 estiloForms">
+            <input id="email" type="email" required>
+            <label for="email">Email</label>
+      </form>
+      </div>
+    </div>
 
-    <label for="password">contraseña</label><br>
-    <div class="estiloForms">
-    <input type="password" class="estiloForms" id="password" name="password" required><br></div>
+    <div class="row limiter">
+      <form class="col s12">
+        <div class="row">
+          
+          <div class="input-field col s12 estiloForms">
+            <input id="user" name="user" type="text" required>
+            <label for="user">Nombre de usuario</label>
+      </form>
+      </div>
+    </div>
 
-    <label for="confirmPassword">confirma tu contraseña</label><br>
-    <div class="estiloForms">
-    <input type="password" class="estiloForms" id="confirmPassword" name="confirmPassword" required><br><br></div>
+    <div class="row limiter">
+      <form class="col s12">
+        <div class="row">
 
-    <br>
+          <div class="input-field col s12 estiloForms">
+            <input type="password" id="password" name="password" required>
+            <label for="password">Contraseña</label>
+      </form>
+      </div>
+    </div>
 
+    <div class="row limiter">
+      <form class="col s12">
+        <div class="row">
+
+          <div class="input-field col s12 estiloForms">
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <label for="confirmPassword">Confirma tu contraseña</label>
+      </form>
+      </div>
+    </div>
+  
     <button style="border-radius: 32px; background-color: #6886C5;" class="btn  waves-effect waves-light" type="submit" name="action" id="btnSubmit">Aceptar</button>
 
     <button style="border-radius: 32px; background-color: #6886C5;" class="btn  waves-effect waves-light" type="button" name="action" id="btnSubmit" onclick="cancelar()">Cancelar</button>
+
+
+    <!--Antiguo form-->
+<!-- <input type="email" id="email" name="email" placeholder="correo electrónico" required><br></div> -->
+    <!-- <br>
+    <div class="estiloForms">
+    <input type="text" class="estiloForms" id="user" name="user" placeholder="nombre de usuario" required><br></div> -->
+
+    <!-- <br>
+    <div class="estiloForms">
+    <input type="password" class="estiloForms" id="password" placeholder="contraseña" name="password" required><br></div> -->
+
+    <!-- <br>
+    <div class="estiloForms">
+    <input type="password" class="estiloForms" id="confirmPassword" name="confirmPassword" required><br><br></div>
+
+    <br> -->
     
     
   </form>
-    </div>
+    
   </center>
   
-
+    <!--Fondo-->
+    <div class="parallax"><img src="/rsrcs/pattern.png" alt="Unsplashed background img 1"></div>
+    </div>
+    <!--Fondo-->
   
   <!--Contenido-->
 

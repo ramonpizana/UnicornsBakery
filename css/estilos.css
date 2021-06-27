@@ -55,11 +55,6 @@
 }
 
 
-body{
-
-  background-size: cover;
-  
-}
 h1{
   color: #6886C5;
   font-family: 'Pacifico', cursive;
@@ -150,6 +145,9 @@ label{
   width: 400px;
   height: 500px;
   object-fit: cover;
+  background-color: white;
+  border-radius:25px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 
@@ -257,9 +255,23 @@ label{
 
 .bgProductos{
   background-color: #F9F7F1;
+  background-image:url(/rsrcs/pattern.png);
 }
 
 .searchStyleBig{
   background-color:#FFE0AC;
   
+}
+
+.fondoSlider{
+  background-color:white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+
+.canastaContainer{
+  background-color:white;
+  width: 100%;
+  height: auto;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }

@@ -26,15 +26,15 @@ function addItem(item){
 
   addItem({'name':'Mil hojas',
   'img':'/rsrcs/productos/milhojas.jpg',
-  'description':'Típico pan frances el cual esta conformado de una rica crema pastelera y una suave capa de merengue.'});
+  'description':'Típico pan frances el cual esta conformado <br> de una rica crema pastelera y una suave <br> capa de merengue.'});
 
   addItem({'name':'Mousse',
   'img':'/rsrcs/productos/mousse2.jpg',
-  'description':'Suave y espumosa crema bañada en una ligera cubierta de chocolate, acompañada de frutos de temporada.'});
+  'description':'Suave y espumosa crema bañada en una <br> ligera cubierta de chocolate, acompañada <br> de frutos de temporada.'});
 
-  addItem({'name':'Roles',
-  'img':'/rsrcs/productos/roles.jpg',
-  'description':'Pan horneado en forma de espiral con relleno de pasas, nuez y canela, bañado de un glaseado especial de azúcar glass.'});
+  // addItem({'name':'Roles',
+  // 'img':'/rsrcs/productos/roles.jpg',
+  // 'description':'Pan horneado en forma de espiral con <br> relleno de pasas, nuez y canela, bañado de <br> un glaseado especial de azúcar glass.'});
 
 
 
