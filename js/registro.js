@@ -9,10 +9,16 @@ function crear(){
      alert('tus constraseñas no coinciden') 
      return false;
     }
-   
-    localStorage.setItem("email",email);
+   var newRegis ={
+       email:email,
+       user:user,
+       password:password,
+   };
+   var regisToJson =JSON.stringify(newRegis);
+   console.log(regisToJson)
+    /*localStorage.setItem("email",email);
     localStorage.setItem("user",user);
-    localStorage.setItem("password",btoa(password));
+    localStorage.setItem("password",btoa(password));*/
 }
 
 function cancelar(){
@@ -23,3 +29,11 @@ function cancelar(){
     
 
 }
+/*var newProduct = {
+    productName: productName,
+    productDescription: productDescription,
+    productImage: productImage
+  };
+  var prodcutJson = JSON.stringify(newProduct);
+  console.log(prodcutJson);*/
+  
