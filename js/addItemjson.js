@@ -8,6 +8,8 @@ function addItem(item){
   itemsContainer.innerHTML += itemHTML;
 } 
 
+
+
   addItem({'name':'Macarron',
   'img':'/rsrcs/productos/maca.jpg',
   'description':'Suave pastelillo conformado de dos dulces galletas con una deliciosa crema casera en medio.'});
