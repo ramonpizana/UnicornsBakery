@@ -10,9 +10,9 @@ function addItem(item){
 
 
 
-  addItem({'name':'Macarron',
-  'img':'/rsrcs/productos/maca.jpg',
-  'description':'Suave pastelillo conformado de dos dulces galletas con una deliciosa crema casera en medio.'});
+  // addItem({'name':'Macarron',
+  // 'img':'/rsrcs/productos/maca.jpg',
+  // 'description':'Suave pastelillo conformado de dos dulces galletas con una deliciosa crema casera en medio.'});
 
   addItem({'name':'Tarta',
   'img':'/rsrcs/productos/tarta.jpg',
@@ -34,9 +34,9 @@ function addItem(item){
   'img':'/rsrcs/productos/mousse2.jpg',
   'description':'Suave y espumosa crema bañada en una <br> ligera cubierta de chocolate, acompañada <br> de frutos de temporada.'});
 
-  // addItem({'name':'Roles',
-  // 'img':'/rsrcs/productos/roles.jpg',
-  // 'description':'Pan horneado en forma de espiral con <br> relleno de pasas, nuez y canela, bañado de <br> un glaseado especial de azúcar glass.'});
+  addItem({'name':'Roles',
+  'img':'/rsrcs/productos/roles.jpg',
+  'description':'Pan horneado en forma de espiral con <br> relleno de pasas, nuez y canela, bañado de <br> un glaseado especial de azúcar glass.'});
 
 
 
