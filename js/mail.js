@@ -35,7 +35,7 @@ app.post("/contactanos/send_email",(req, res) =>{
             req.status(200).jsonp(req.body);
         }
     });
-    res.redirect("http://localhost:5500/contactanos.html");
+    res.redirect("http://localhost:5500/html/contactanos.html");
 });
 
 app.listen(3000, () => {
