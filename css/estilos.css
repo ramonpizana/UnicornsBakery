@@ -276,3 +276,10 @@ label{
   height: auto;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
+.fondoBanner{
+  text-align: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 1280;
+  height: 350px;
+}

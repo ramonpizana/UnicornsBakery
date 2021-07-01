@@ -12,13 +12,32 @@ function crear(){
        password:password,
    };
 
+   if(user == ""){
+    M.toast({html: 'Debes introducir un usuario', classes: 'rounded'});
+    return
+   }
+
+   if(password == ""){
+        M.toast({html: 'Debes introducir una contraseña', classes: 'rounded'});
+        return
+       }
+
+    if(password.length < 8){
+        M.toast({html: 'Tu contraseña debe ser mayor a 8 caracteres', classes: 'rounded'});
+        return
+    } 
+
+
    if(password != confirmPassword){
-    alert('tus constraseñas no coinciden') 
-    return false;
-   } else {
+    M.toast({html: 'tus constraseñas no coinciden', classes: 'rounded'});
+     return  
+    } 
+
+
     var regisToJson =JSON.stringify(newRegis);
     console.log(regisToJson)
-   }
+
+   
   
 }
 
