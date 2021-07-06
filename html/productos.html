@@ -62,21 +62,80 @@
 
 
 <center>
-<div id = "list-items">
+<!-- <div id = "list-items">
+ 
+</div> -->
+
+<div id = "newProducts">
  
 </div>
-
-
-
-<a style="background-color: #6886C5;" class="btn-floating btn-large waves-effect waves-light tooltipped pulse" 
-data-position="top" data-tooltip="Añadir nuevo producto" href="nuevoProducto.html"><i class="material-icons">add</i></a>
-
-</center>
-
+<br>
+<br>
+<br>
 <br>
 
 
 
+  <!-- Modal Trigger -->
+  <a style="background-color: #6886C5;" class="btn-floating btn-large waves-effect waves-light tooltipped pulse modal-trigger" 
+data-position="top" data-tooltip="Añadir nuevo producto" href="#modal1"><i class="material-icons">add</i></a>
+
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content" style="background-image: url(/rsrcs/pattern.png);">
+      <h4 class="fuente1">Nuevo producto</h4>
+      
+    <div class="row">
+      <form action="" onsubmit="submitProduct(); return false" class="col s6 offset-s3"> 
+   
+       <div class="row limiter">
+         <div class="col s12">
+           <div class="row">
+             
+             <div class="input-field col s12 estiloForms">
+               <input id="productName" name="productName" type="text" required>
+               <label for="productName">Nombre del producto</label>
+             </div>
+         </div>
+       </div>
+       </div>
+   
+       <div class="row limiter">
+         <div class="col s12">
+           <div class="row">
+             
+             <div class="input-field col s12 estiloForms">
+               <input id="productDescription" name="productDescription" type="text" required>
+               <label for="productDescription">Descripción del producto</label>
+             </div>
+         </div>
+       </div>
+       </div>
+      
+       
+         <div class="file-field input-field">
+           <div style="border-radius: 32px; background-color: #6886C5;" class="btn waves-effect waves-light">
+             <span>Imagen</span>
+             <input id="productImage" name="productImage" type="file" accept="image/*">
+           </div>
+           <div class="file-path-wrapper">
+             <input disabled id="validateProductImage" class="file-path validate" type="text">
+           </div>
+         </div>
+       
+    </div>
+    <button style="border-radius: 32px; background-color: #6886C5;" class="btn  waves-effect waves-light" type="submit" name="action" id="btnSubmit">Subir Producto</button>
+    <br>
+   
+    
+  </div>
+          
+        
+
+</center>
+
+<br>
 
 
 <!--Contenido-->
@@ -126,7 +185,7 @@ data-position="top" data-tooltip="Añadir nuevo producto" href="nuevoProducto.ht
   <script src="/js/materialize.js"></script>
   <script src="/js/init.js"></script>
   <script src="/js/main.js"></script>
-  <script src="/js/addItemjson.js"></script>
+  <!-- <script src="/js/addItemjson.js"></script> -->
   <script src="/js/product.js"></script>
 
   </body>

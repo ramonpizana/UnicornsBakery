@@ -5,3 +5,7 @@ $(document).ready(function(){
 $(document).ready(function(){
   $('.tooltipped').tooltip();
 });
+
+$(document).ready(function(){
+  $('#modal1').modal();
+});
