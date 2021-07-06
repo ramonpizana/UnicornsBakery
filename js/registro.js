@@ -39,19 +39,20 @@ function crear(){
 
  var traer = JSON.parse(localStorage.getItem('users'));
 
-/* traer[traer.length]=JSON.stringify(newRegis)
- */console.log(traer);
+ var keys = Object.keys(traer);
+ traer[keys.length]=newRegis;
+//  console.log(traer);
+ 
 
-   /*  var regisToJson =JSON.stringify(newRegis);
-    console.log(regisToJson)
+var regisToJson = JSON.stringify(traer);
 
-    localStorage.setItem('user',JSON.stringify(newRegis)) */
+localStorage.setItem('users',regisToJson);
   
 }
 
 function verifyUsers(){
     if (!localStorage.getItem('users')){
-        localStorage.setItem('users','{0:{email:admin@root.com,user:root,password:admin}}')
+        localStorage.setItem('users',JSON.stringify({0:{email:'admin@root.com',user:'root',password:'admin'}}))
     }
 }
 
