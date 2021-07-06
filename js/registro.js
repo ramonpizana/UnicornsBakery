@@ -1,6 +1,7 @@
 //document.getElementById("crear").addEventListener('click', crear);
 
 function crear(){
+    verifyUsers();
     let email =   document.getElementById("email").value;
     let user =   document.getElementById("user").value;  
     let password =   document.getElementById("password").value;  
@@ -11,6 +12,7 @@ function crear(){
        user:user,
        password:password,
    };
+
 
    if(user == ""){
     M.toast({html: 'Debes introducir un usuario', classes: 'rounded'});
@@ -37,8 +39,14 @@ function crear(){
     var regisToJson =JSON.stringify(newRegis);
     console.log(regisToJson)
 
-   
+    localStorage.setItem('user',JSON.stringify(newRegis))
   
+}
+
+function verifyUsers(){
+    if (!localStorage.getItem('users')){
+        localStorage.setItem('users','{0:{email:admin@root.com,user:root,password:admin}}')
+    }
 }
 
 function cancelar(){
