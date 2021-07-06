@@ -36,10 +36,16 @@ function crear(){
     } 
 
 
-    var regisToJson =JSON.stringify(newRegis);
+
+ var traer = JSON.parse(localStorage.getItem('users'));
+
+/* traer[traer.length]=JSON.stringify(newRegis)
+ */console.log(traer);
+
+   /*  var regisToJson =JSON.stringify(newRegis);
     console.log(regisToJson)
 
-    localStorage.setItem('user',JSON.stringify(newRegis))
+    localStorage.setItem('user',JSON.stringify(newRegis)) */
   
 }
 
@@ -48,6 +54,7 @@ function verifyUsers(){
         localStorage.setItem('users','{0:{email:admin@root.com,user:root,password:admin}}')
     }
 }
+
 
 function cancelar(){
     document.getElementById("email").value="";
