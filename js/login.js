@@ -1,11 +1,12 @@
 function login (){
+  
   let emailLogin =   document.getElementById("emailLogin").value;
   let passwordLogin =   document.getElementById("passwordLogin").value;  
 
-  var usersLogin={
+   var usersLogin={
     emailLogin:emailLogin,
     passwordLogin:passwordLogin
-  }
+  } 
   /*if(emailLogin == ""){
     M.toast({html: 'Debes introducir un usuario', classes: 'rounded'});
     return
@@ -16,12 +17,17 @@ function login (){
     return
    }*/
 
+   localStorage.setItem('userLogin',JSON.stringify({0:{emailLogin:'',passwordLogin:''}))
+
   var traerLogin = JSON.parse(localStorage.getItem('usersLogin'));
  var keysLogin = Object.keys(traerLogin);
 
-if(localStorage.getItem('users')){
+
+ for(let i = 0;i<keysLogin.length;i++){
+if(usersLogin.emailLogin!=traerLogin[i] ||  usersLogin.passwordLogin==traerLogin[i]){
   alert("Hola")
 }
+ }
 
 
 
@@ -35,10 +41,8 @@ if(localStorage.getItem('users')){
     }*/
     
  
- /*traer[keys.length]=newRegis;
+ traerLogin[keysLogin.length]=usersLogin;
 
- //  console.log(traer);
- var regisToJson = JSON.stringify(traer);
- localStorage.setItem('users',regisToJson);*/
+ var regisToJson = JSON.stringify(traerLogin);
+ localStorage.setItem('users',regisToJson);
 }
-
