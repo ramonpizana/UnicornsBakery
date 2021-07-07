@@ -7,6 +7,7 @@ function crear(){
     let password =   document.getElementById("password").value;  
     let confirmPassword =   document.getElementById("confirmPassword").value;
   
+    
    var newRegis ={
        email:email,
        user:user,

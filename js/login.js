@@ -28,6 +28,7 @@ if(emailLogin==traerLogin[i].email &&  passwordLogin==traerLogin[i].password){
 
 }
 
+
 function verifyUsers(){
   if (!localStorage.getItem('users')){
       localStorage.setItem('users',JSON.stringify({0:{email:'admin@root.com',user:'root',password:'admin'}}))
