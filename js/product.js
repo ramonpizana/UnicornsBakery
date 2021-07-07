@@ -1,3 +1,16 @@
+function addItem(item){
+  const itemHTML =   '<div class="producto">\n'+
+ ' <img class="imgProducto" src="/rsrcs/productos/'+item.productImage+'" alt="">\n'+
+ ' <h5>'+item.productName+'</h5>\n'+
+ ' <p>'+item.productDescription+'</p>\n'+
+ '   </div>\n';
+  const itemsContainer = document.getElementById("newProducts");
+  itemsContainer.innerHTML += itemHTML;
+} 
+
+
+
+
 function submitProduct() {
   var allowedExtension = ['jpeg', 'jpg', 'png'];
   var fileExtension = document.getElementById('validateProductImage').value.split('.').pop().toLowerCase();
@@ -9,7 +22,7 @@ function submitProduct() {
       isValidFile = true;
       var productName = document.getElementById("productName").value;
       var productDescription = document.getElementById("productDescription").value;
-      var productImage = document.getElementById("productImage").value;
+      var productImage = document.getElementById("validateProductImage").value;
 
       var newProduct = {
         productName: productName,
@@ -17,7 +30,12 @@ function submitProduct() {
         productImage: productImage
       };
       var prodcutJson = JSON.stringify(newProduct);
+      addItem({'productName':productName,
+  'productImage':productImage,
+  'productDescription':productDescription});
       console.log(prodcutJson);
+
+
       break;
     }
   }
