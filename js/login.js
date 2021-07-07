@@ -17,7 +17,7 @@ function login (){
     return
    }*/
 
-   localStorage.setItem('userLogin',JSON.stringify({0:{emailLogin:'',passwordLogin:''}))
+   localStorage.setItem('userLogin',JSON.stringify({0:{emailLogin:'',passwordLogin:''}}));
 
   var traerLogin = JSON.parse(localStorage.getItem('usersLogin'));
  var keysLogin = Object.keys(traerLogin);
