@@ -2,8 +2,11 @@ function login (){
   let emailLogin =   document.getElementById("emailLogin").value;
   let passwordLogin =   document.getElementById("passwordLogin").value;  
 
-  
-  if(emailLogin == ""){
+  var usersLogin={
+    emailLogin:emailLogin,
+    passwordLogin:passwordLogin
+  }
+  /*if(emailLogin == ""){
     M.toast({html: 'Debes introducir un usuario', classes: 'rounded'});
     return
    }
@@ -11,27 +14,31 @@ function login (){
    if(passwordLogin == ""){
     M.toast({html: 'Debes introducir una contraseña', classes: 'rounded'});
     return
-   }
+   }*/
 
-   var traer = JSON.parse(localStorage.getItem('users'));
- var keys = Object.keys(traer);
- 
- for(let i = 0;i<keys.length;i++){
-     if(newRegis.email==traer[i].email ||  newRegis.user==traer[i].user){
-        M.toast({html: 'Ese usuario ya existe',classes: 'rounded'});
+  var traerLogin = JSON.parse(localStorage.getItem('usersLogin'));
+ var keysLogin = Object.keys(traerLogin);
+
+if(localStorage.getItem('users')){
+  alert("Hola")
+}
+
+
+
+
+
+
+ /*for(let i = 0;i<keysLogin.length;i++){
+     if(usersLogin.emailLogin!=traerLogin[i].email ||  usersLogin.passwordLogin!=traerLogin[i].password){
+        M.toast({html: 'Ese usuario no existe',classes: 'rounded'});
         return
-    }
- }
-
-
-
-
-
-
-
-
-
-
+    }*/
+    
  
+ /*traer[keys.length]=newRegis;
+
+ //  console.log(traer);
+ var regisToJson = JSON.stringify(traer);
+ localStorage.setItem('users',regisToJson);*/
 }
 
