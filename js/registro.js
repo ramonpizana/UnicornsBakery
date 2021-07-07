@@ -85,3 +85,4 @@ function cancelar(){
   var prodcutJson = JSON.stringify(newProduct);
   console.log(prodcutJson);*/
   
+  

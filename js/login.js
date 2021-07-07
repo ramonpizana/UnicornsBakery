@@ -1,13 +1,10 @@
 function login (){
-  
+  verifyUsers()
   let emailLogin =   document.getElementById("emailLogin").value;
   let passwordLogin =   document.getElementById("passwordLogin").value;  
 
-   var usersLogin={
-    emailLogin:emailLogin,
-    passwordLogin:passwordLogin
-  } 
-  /*if(emailLogin == ""){
+ 
+ if(emailLogin == ""){
     M.toast({html: 'Debes introducir un usuario', classes: 'rounded'});
     return
    }
@@ -15,34 +12,25 @@ function login (){
    if(passwordLogin == ""){
     M.toast({html: 'Debes introducir una contraseña', classes: 'rounded'});
     return
-   }*/
+   }
 
-   localStorage.setItem('userLogin',JSON.stringify({0:{emailLogin:'',passwordLogin:''}}));
-
-  var traerLogin = JSON.parse(localStorage.getItem('usersLogin'));
+  var traerLogin = JSON.parse(localStorage.getItem('users'));
  var keysLogin = Object.keys(traerLogin);
 
 
  for(let i = 0;i<keysLogin.length;i++){
-if(usersLogin.emailLogin!=traerLogin[i] ||  usersLogin.passwordLogin==traerLogin[i]){
-  alert("Hola")
+if(emailLogin==traerLogin[i].email &&  passwordLogin==traerLogin[i].password){
+        return location.href="/html/home.html"; 
+        
 }
  }
+ M.toast({html: 'Usuario o Contraseña incorrecto', classes: 'rounded'});
 
-
-
-
-
-
- /*for(let i = 0;i<keysLogin.length;i++){
-     if(usersLogin.emailLogin!=traerLogin[i].email ||  usersLogin.passwordLogin!=traerLogin[i].password){
-        M.toast({html: 'Ese usuario no existe',classes: 'rounded'});
-        return
-    }*/
-    
- 
- traerLogin[keysLogin.length]=usersLogin;
-
- var regisToJson = JSON.stringify(traerLogin);
- localStorage.setItem('users',regisToJson);
 }
+
+function verifyUsers(){
+  if (!localStorage.getItem('users')){
+      localStorage.setItem('users',JSON.stringify({0:{email:'admin@root.com',user:'root',password:'admin'}}))
+  }
+}
+
