@@ -38,14 +38,20 @@ function crear(){
 
 
  var traer = JSON.parse(localStorage.getItem('users'));
-
  var keys = Object.keys(traer);
- traer[keys.length]=newRegis;
+ for(let i = 0;i<keys.length;i++){
+     //console.log(traer.length);
+     if(keys[i]==newRegis){
+         alert("Hola")
+
+        // M.toast({html: 'Ese usuario ya existe',classes: 'rounded'});
+        //return
+    }
+ }
+     traer[keys.length]=newRegis;
+
 //  console.log(traer);
- 
-
 var regisToJson = JSON.stringify(traer);
-
 localStorage.setItem('users',regisToJson);
   
 }
