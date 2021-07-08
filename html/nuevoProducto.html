@@ -24,7 +24,7 @@
       <ul id="nav-mobile" class="right hide-on-med-and-down fuenteNavbar">
         <li><a href="home.html">Inicio</a></li>
         <li><a href="aboutUs.html">Nosotros</a></li>
-        <li><a href="productos.html">Productos</a></li>
+        <li><a href="nuevoProducto.html">Productos</a></li>
         <li><a href="contactanos.html">Contacto</a></li>
         <li><a href="registro.html"><img src="/rsrcs/user.png" width="20px" height="20px"></a></li>
         <li><a href="canasta.html"><button class="canasta"><img src="/rsrcs/canasta.png" width="80px" height="15px"></button></li></a>
@@ -39,64 +39,89 @@
 
     <!--Contenido-->
     <center>
-    <h1>Nuevo producto</h1>
+    <h1>Menú</h1>
     
     <br>
     <br>
 
+
+    <center>
+      <div id = "newProducts">
+     
+      </div>
+    </center>
+
+      <!--Modal trigger-->
+    <a style="background-color: #6886C5;" class="btn-floating btn-large waves-effect waves-light tooltipped pulse modal-trigger" 
+    data-position="top" data-tooltip="Añadir nuevo producto" href="#modal1"><i class="material-icons">add</i></a>
+
+    
+ <!--Modal-->
+    <div id="modal1" class="modal bottom-sheet">
+      <div class="modal-content">
+        <h4>Nuevo producto</h4>
+       
     <div class="row">
-   <form action="" onsubmit="submitProduct(); return false" class="col s6 offset-s3"> 
-
-    <div class="row limiter">
-      <div class="col s12">
-        <div class="row">
-          
-          <div class="input-field col s12 estiloForms">
-            <input id="productName" name="productName" type="text" required>
-            <label for="productName">Nombre del producto</label>
-          </div>
-      </div>
-    </div>
-    </div>
-
-    <div class="row limiter">
-      <div class="col s12">
-        <div class="row">
-          
-          <div class="input-field col s12 estiloForms">
-            <input id="productDescription" name="productDescription" type="text" required>
-            <label for="productDescription">Descripción del producto</label>
-          </div>
-      </div>
-    </div>
-    </div>
+      <form action="" onsubmit="submitProduct(); return false" class="col s6 offset-s3"> 
    
-    
-      <div class="file-field input-field">
-        <div style="border-radius: 32px; background-color: #6886C5;" class="btn waves-effect waves-light">
-          <span>Imagen</span>
-          <input id="productImage" name="productImage" type="file" accept="image/*">
-        </div>
-        <div class="file-path-wrapper">
-          <input disabled id="validateProductImage" class="file-path validate" type="text">
-        </div>
+       <div class="row limiter">
+         <div class="col s12">
+           <div class="row">
+             
+             <div class="input-field col s12 estiloForms">
+               <input id="productName" name="productName" type="text" required>
+               <label for="productName">Nombre del producto</label>
+             </div>
+         </div>
+       </div>
+       </div>
+   
+       <div class="row limiter">
+         <div class="col s12">
+           <div class="row">
+             
+             <div class="input-field col s12 estiloForms">
+               <input id="productDescription" name="productDescription" type="text" required>
+               <label for="productDescription">Descripción del producto</label>
+             </div>
+         </div>
+       </div>
+       </div>
+      
+       
+         <div class="file-field input-field">
+           <div style="border-radius: 32px; background-color: #6886C5;" class="btn waves-effect waves-light">
+             <span>Imagen</span>
+             <input id="productImage" name="productImage" type="file" accept="image/*">
+           </div>
+           <div class="file-path-wrapper">
+             <input disabled id="validateProductImage" class="file-path validate" type="text">
+           </div>
+         </div>
+       
+     
+       <button style="border-radius: 32px; background-color: #6886C5;" class="btn  waves-effect waves-light" type="submit" name="action" id="btnSubmit">Subir Producto</button>
+   
+   
+       
+   
+   
+       <!-- <button style="border-radius: 32px; background-color: #6886C5;" class="btn  waves-effect waves-light" type="button" name="action" id="btnSubmit" onclick="cancelar()">Cancelar</button> -->
+       
+     </form>
+    </div>
       </div>
-    
-  
-    <button style="border-radius: 32px; background-color: #6886C5;" class="btn  waves-effect waves-light" type="submit" name="action" id="btnSubmit">Subir Producto</button>
-
-
-    <div id = "newProducts">
- 
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
     </div>
 
 
-    <!-- <button style="border-radius: 32px; background-color: #6886C5;" class="btn  waves-effect waves-light" type="button" name="action" id="btnSubmit" onclick="cancelar()">Cancelar</button> -->
-    
-  </form>
- </div>
+
+
   </center>
-  
+
+
     <!--Fondo-->
     <div class="parallax"><img src="/rsrcs/pattern.png" alt="Unsplashed background img 1"></div>
     </div>
