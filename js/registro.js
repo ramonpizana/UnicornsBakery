@@ -7,6 +7,7 @@ function crear(){
     let password =   document.getElementById("password").value;  
     let confirmPassword =   document.getElementById("confirmPassword").value;
   
+    
    var newRegis ={
        email:email,
        user:user,
@@ -38,14 +39,19 @@ function crear(){
 
 
  var traer = JSON.parse(localStorage.getItem('users'));
-
  var keys = Object.keys(traer);
- traer[keys.length]=newRegis;
-//  console.log(traer);
  
+ for(let i = 0;i<keys.length;i++){
+     if(newRegis.email==traer[i].email ||  newRegis.user==traer[i].user){
+        M.toast({html: 'Ese usuario ya existe',classes: 'rounded'});
+        return
+    }
+ }
 
+     traer[keys.length]=newRegis;
+
+//  console.log(traer);
 var regisToJson = JSON.stringify(traer);
-
 localStorage.setItem('users',regisToJson);
   
 }
@@ -79,4 +85,5 @@ function cancelar(){
   };
   var prodcutJson = JSON.stringify(newProduct);
   console.log(prodcutJson);*/
+  
   
