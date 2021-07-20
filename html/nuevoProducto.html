@@ -62,7 +62,7 @@
         <h4 class="fuente1">Nuevo producto</h4>
        
     <div class="row">
-      <form action="" onsubmit="submitProduct();" class="col s6 offset-s3"> 
+      <form action="" onsubmit="submitProduct(); return false;" class="col s6 offset-s3"> 
    
        <div class="row limiter">
          <div class="col s12">
@@ -87,6 +87,42 @@
          </div>
        </div>
        </div>
+
+       <div class="row limiter">
+        <div class="col s12">
+          <div class="row">
+            
+            <div class="input-field col s12 estiloForms">
+              <input id="productQuantity" name="productQuantity" type="number" required>
+              <label for="productQuantity">Cantidad de productos (solo números)</label>
+            </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="row limiter">
+        <div class="col s12">
+          <div class="row">
+            
+            <div class="input-field col s12 estiloForms">
+              <input id="productTag" name="productTag" type="text" required>
+              <label for="productTag">Categoría</label>
+            </div>
+        </div>
+      </div>
+      </div>
+
+       <div class="row limiter">
+        <div class="col s12">
+          <div class="row">
+            
+            <div class="input-field col s12 estiloForms">
+              <input id="productPrice" name="productPrice" type="number" required>
+              <label for="productPrice">Precio (Solo número)</label>
+            </div>
+        </div>
+      </div>
+      </div>
       
        
          <div class="file-field input-field">
@@ -112,7 +148,7 @@
     </div>
       </div>
       <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        <a href="/html/nuevoProducto.html" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
       </div>
     </div>
 

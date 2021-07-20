@@ -2,18 +2,29 @@
 
 window.onload=addItem();
 function addItem(){
-  var items = JSON.parse(localStorage.getItem("newProduct"));
-var keysProduct = Object.keys(items);
-  for(let i = 0; i < keysProduct.length;i++){
-  const itemHTML =   '<div class="producto">\n'+
- ' <img class="imgProducto" src="/rsrcs/productos/'+items[i].productImage+'" alt="">\n'+
- ' <h5>'+items[i].productName+'</h5>\n'+
- ' <p>'+items[i].productDescription+'</p>\n'+
- '   </div>\n';
-  const itemsContainer = document.getElementById("newProducts");
-  itemsContainer.innerHTML += itemHTML;
+  fetch('http://localhost:8080/product/all')
+  .then(response => response.json())
+  .then(data => viewCard(data));
+  
 }
-} 
+ 
+
+function viewCard(data){
+  // var items = JSON.parse(localStorage.getItem("newProduct"));
+  var items = data;
+  var keysProduct = Object.keys(items);
+    for(let i = 0; i < keysProduct.length;i++){
+    const itemHTML =   '<div class="producto">\n'+
+   ' <img class="imgProducto" src="/rsrcs/productos/'+items[i].route_image+'" alt="">\n'+
+   ' <h5>'+items[i].name+'</h5>\n'+
+   ' <p>'+items[i].description+'</p>\n'+
+   ' <p>Precio: $'+items[i].price+'</p>\n'+
+   '   </div>\n';
+    const itemsContainer = document.getElementById("newProducts");
+    itemsContainer.innerHTML += itemHTML;
+    }
+}
+
 function submitProduct() {
   verifyProducts();
   var allowedExtension = ['jpeg', 'jpg', 'png'];
@@ -27,6 +38,9 @@ function submitProduct() {
       var productName = document.getElementById("productName").value;
       var productDescription = document.getElementById("productDescription").value;
       var productImage = document.getElementById("validateProductImage").value;
+      var productPrice = document.getElementById("productPrice").value;
+      var productQuantity = document.getElementById("productQuantity").value;
+      var productTag = document.getElementById("productTag").value;
 
       /*var prodcutJson = JSON.stringify(newProduct);
       addItem({'productName':productName,
@@ -34,41 +48,78 @@ function submitProduct() {
   'productDescription':productDescription});
   
       console.log(prodcutJson);*/
+
+      
     var newProducts = {
-      productName:productName,
-      productDescription:productDescription,
-      productImage:productImage
+      name:productName,
+      description:productDescription,
+      route_image:productImage,
+      price:productPrice,
+      quantity:productQuantity,
+      tags:productTag
     };
+    var newProductsKeys = Object.keys(newProducts);
+  
+  var data = new FormData();
+  for (let i = 0; i < newProducts.length;i++){
+    data.append(newProductsKeys[i] , newProducts[i]);
+  }
+  console.log(data);
+  // data.append( "json", JSON.stringify( newProducts ) );
+
+    //var data = JSON.stringify(newProducts);
+  
+  fetch("http://localhost:8080/product/addProduct",
+  {
+      method: "POST",
+      body: newProducts
+  })
+  .then(function(res){console.log(res.status); return res.json(); })
+  .then(function(data){console.log( JSON.stringify( data ) ) })
     
-var traerProduct = JSON.parse(localStorage.getItem('newProduct'));
- var keysProduct = Object.keys(traerProduct);
+
+  
+
+
+
+
+
+// var traerProduct = JSON.parse(localStorage.getItem('newProduct'));
+//  var keysProduct = Object.keys(traerProduct);
  
- for(let i = 0; i < keysProduct.length;i++){
-     if( newProducts.productName == traerProduct[i].productName){
-        M.toast({html: 'Este producto ya existe',classes: 'rounded'});
-        return
-    }
- }
+//  for(let i = 0; i < keysProduct.length;i++){
+//      if( newProducts.productName == traerProduct[i].productName){
+//         M.toast({html: 'Este producto ya existe',classes: 'rounded'});
+//         return
+//     }
+//  }
 
-     traerProduct[keysProduct.length]=newProducts;
+//      traerProduct[keysProduct.length]=newProducts;
 
-//  console.log(traer);
-var productToJson = JSON.stringify(traerProduct);
-localStorage.setItem('newProduct',productToJson);
+// //  console.log(traer);
+// var productToJson = JSON.stringify(traerProduct);
+// localStorage.setItem('newProduct',productToJson);
 
 
 
-      break;
+//       break;
     }
   }
 
-  if (!isValidFile) {
-    alert('Solo permite extensiones de tipo : *.' + allowedExtension.join(', *.'));
-  }
+  // if (!isValidFile) {
+  //   alert('Solo permite extensiones de tipo : *.' + allowedExtension.join(', *.'));
+  // }
 
-  return isValidFile;
+  // return isValidFile;
 
 }
+
+
+function postProduct(data){
+  if(JSON.parse(data).includes("Saved"))
+  return M.toast({html: 'Producto posteado!', classes: 'rounded'});
+}
+
 function verifyProducts(){
   if(!localStorage.getItem('newProduct')){
     localStorage.setItem('newProduct',JSON.stringify({}));
