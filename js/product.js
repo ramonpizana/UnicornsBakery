@@ -25,7 +25,7 @@ function viewCard(data){
     }
 }
 
-function submitProduct() {
+async function submitProduct() {
   verifyProducts();
   var allowedExtension = ['jpeg', 'jpg', 'png'];
   var fileExtension = document.getElementById('validateProductImage').value.split('.').pop().toLowerCase();
@@ -51,31 +51,34 @@ function submitProduct() {
 
       
     var newProducts = {
-      name:productName,
-      description:productDescription,
       route_image:productImage,
-      price:productPrice,
+      description:productDescription,
+      name:productName,
       quantity:productQuantity,
-      tags:productTag
+      price:productPrice,
+      tags:productTag,
+      id_category:1
     };
     var newProductsKeys = Object.keys(newProducts);
   
   var data = new FormData();
   for (let i = 0; i < newProducts.length;i++){
-    data.append(newProductsKeys[i] , newProducts[i]);
+    data.append(newProductsKeys[i] , newProducts[i].toString());
   }
   console.log(data);
   // data.append( "json", JSON.stringify( newProducts ) );
 
     //var data = JSON.stringify(newProducts);
   
-  fetch("http://localhost:8080/product/addProduct",
+  const response = await fetch("http://localhost:8080/product/addProduct",
   {
       method: "POST",
-      body: newProducts
+      body: data,
+      headers: {'Content-Type': 'multipart/form-data',}
+      
+
   })
-  .then(function(res){console.log(res.status); return res.json(); })
-  .then(function(data){console.log( JSON.stringify( data ) ) })
+    console.log(response);
     
 
   
