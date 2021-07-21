@@ -57,12 +57,12 @@
 
     
  <!--Modal-->
-    <div id="modal1" class="modal bottom-sheet">
-      <div class="modal-content">
+    <div id="modal1" class="modal">
+      <div class="modal-content" style="background-image: url(/rsrcs/pattern.png);">
         <h4 class="fuente1">Nuevo producto</h4>
        
     <div class="row">
-      <form action="" onsubmit="submitProduct(); return false;" class="col s6 offset-s3"> 
+      <form action="" onsubmit="submitProduct();" class="col s6 offset-s3"> 
    
        <div class="row limiter">
          <div class="col s12">
@@ -137,6 +137,8 @@
        
      
        <button style="border-radius: 32px; background-color: #6886C5;" class="btn  waves-effect waves-light" type="submit" name="action" id="btnSubmit">Subir Producto</button>
+
+       <a href="/html/nuevoProducto.html"><button style="border-radius: 32px; background-color: #6886C5;" class="btn  waves-effect waves-light" type="button" name="action" id="Cancel">Cancelar</button></a>
    
    
        
@@ -147,11 +149,6 @@
      </form>
     </div>
       </div>
-      <div class="modal-footer">
-        <a href="/html/nuevoProducto.html" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
-      </div>
-    </div>
-
 
 
 
