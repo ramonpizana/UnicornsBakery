@@ -25,7 +25,7 @@ function viewCard(data){
     }
 }
 
-async function submitProduct() {
+function submitProduct() {
   verifyProducts();
   var allowedExtension = ['jpeg', 'jpg', 'png'];
   var fileExtension = document.getElementById('validateProductImage').value.split('.').pop().toLowerCase();
@@ -51,34 +51,43 @@ async function submitProduct() {
 
       
     var newProducts = {
-      route_image:productImage,
-      description:productDescription,
-      name:productName,
-      quantity:productQuantity,
-      price:productPrice,
-      tags:productTag,
-      id_category:1
+      "route_image":productImage,
+      "description":productDescription,
+      "name":productName,
+      "quantity":productQuantity,
+      "price":productPrice,
+      "tags":productTag,
+      "id_category":1
     };
-    var newProductsKeys = Object.keys(newProducts);
+    //console.log(newProducts)
+  //   var newProductsKeys = Object.keys(newProducts);
   
-  var data = new FormData();
-  for (let i = 0; i < newProducts.length;i++){
-    data.append(newProductsKeys[i] , newProducts[i].toString());
-  }
-  console.log(data);
-  // data.append( "json", JSON.stringify( newProducts ) );
+  // var data = new FormData();
+  // data.append("route_image",productImage);
+  // data.append("description",productDescription);
+  // data.append("name",productName);
+  // data.append("quantity",productQuantity);
+  // data.append("price",productPrice);
+  // data.append("tags",productTag);
+  // data.append("id_category",1);
 
-    //var data = JSON.stringify(newProducts);
+  // data.append(JSON.stringify( newProducts ) );
+  // console.log(data);
+
+  var data = JSON.stringify(newProducts);
   
-  const response = await fetch("http://localhost:8080/product/addProduct",
+  fetch("http://localhost:8080/product/addProduct",
   {
-      method: "POST",
-      body: data,
-      headers: {'Content-Type': 'multipart/form-data',}
-      
-
-  })
-    console.log(response);
+    method: 'POST',
+    mode: 'same-origin',
+    body: data, 
+    headers:{
+      'Accept': 'application/json, text/plain',
+      'Content-Type': 'application/json;charset=UTF-8'
+    }
+  }).then(response => response.json())
+  .catch(error => console.error('Error:', error))
+  .then(response => console.log('Success:', response));
     
 
   
