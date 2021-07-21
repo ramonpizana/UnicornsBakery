@@ -25,7 +25,7 @@ function viewCard(data){
     }
 }
 
-function submitProduct() {
+async function submitProduct() {
   verifyProducts();
   var allowedExtension = ['jpeg', 'jpg', 'png'];
   var fileExtension = document.getElementById('validateProductImage').value.split('.').pop().toLowerCase();
@@ -42,12 +42,7 @@ function submitProduct() {
       var productQuantity = document.getElementById("productQuantity").value;
       var productTag = document.getElementById("productTag").value;
 
-      /*var prodcutJson = JSON.stringify(newProduct);
-      addItem({'productName':productName,
-  'productImage':productImage,
-  'productDescription':productDescription});
-  
-      console.log(prodcutJson);*/
+      
 
       
     var newProducts = {
@@ -59,35 +54,22 @@ function submitProduct() {
       "tags":productTag,
       "id_category":1
     };
-    //console.log(newProducts)
-  //   var newProductsKeys = Object.keys(newProducts);
-  
-  // var data = new FormData();
-  // data.append("route_image",productImage);
-  // data.append("description",productDescription);
-  // data.append("name",productName);
-  // data.append("quantity",productQuantity);
-  // data.append("price",productPrice);
-  // data.append("tags",productTag);
-  // data.append("id_category",1);
-
-  // data.append(JSON.stringify( newProducts ) );
-  // console.log(data);
+    
 
   var data = JSON.stringify(newProducts);
-  
-  fetch("http://localhost:8080/product/addProduct",
+  // console.log(newProducts);
+  console.log(data);
+  const response = await fetch("http://127.0.0.1:8080/product/addProduct",
   {
     method: 'POST',
-    mode: 'same-origin',
+    mode: 'cors',
     body: data, 
     headers:{
-      'Accept': 'application/json, text/plain',
-      'Content-Type': 'application/json;charset=UTF-8'
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
     }
-  }).then(response => response.json())
-  .catch(error => console.error('Error:', error))
-  .then(response => console.log('Success:', response));
+  })
+  console.log(response.status)
     
 
   
@@ -95,7 +77,7 @@ function submitProduct() {
 
 
 
-
+//local storage
 // var traerProduct = JSON.parse(localStorage.getItem('newProduct'));
 //  var keysProduct = Object.keys(traerProduct);
  
