@@ -1,4 +1,50 @@
-function addItem(item){
+window.onload=addItem();
+function addItem(){
+ 
+  fetch('http://localhost:8080/product/all')
+  .then(response => response.json())
+  .then(data => viewCard(data));
+}
+function viewCard(data){
+  // var items = JSON.parse(localStorage.getItem("newProduct"));
+  var items = data;
+items.reverse()
+console.log(items);
+
+    for(let i = 0; i <= 2; i++){
+   var productos =   '<div class="producto">\n'+
+   ' <img class="imgProducto" src="/rsrcs/productos/'+items[i].route_image+'" alt="">\n'+
+   ' <h5>'+items[i].name+'</h5>\n'+
+   ' <p>'+items[i].description+'</p>\n'+
+   ' <p>Precio: $'+items[i].price+'</p>\n'+
+   '   </div>\n';
+    const itemsContainer = document.getElementById("list-itemsN");
+    itemsContainer.innerHTML += productos;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* function addItem(item){
   const itemHTML =   '<div class="producto">\n'+
  ' <img class="imgProducto" src="'+item.img+'" alt="">\n'+
  ' <h5>'+item.name+'</h5>\n'+
@@ -18,4 +64,4 @@ function addItem(item){
 
   addItem({'name':'Pay',
   'img':'/rsrcs/productos/pay.jpg',
-  'description':'Fina base de galleta molida, con relleno de queso crema y un ligero toque de limon cubierta con frutos de temporada.'});
+  'description':'Fina base de galleta molida, con relleno de queso crema y un ligero toque de limon cubierta con frutos de temporada.'}); */
