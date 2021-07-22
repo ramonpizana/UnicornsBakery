@@ -1,14 +1,61 @@
-function addItem(item){
-  const itemHTML =   '<div class="producto">\n'+
+window.onload=addItem();
+function addItem(){
+ 
+  fetch('http://localhost:8080/product/all')
+  .then(response => response.json())
+  .then(data => viewCard(data));
+}
+function viewCard(data){
+  // var items = JSON.parse(localStorage.getItem("newProduct"));
+  var items = data;
+items.reverse()
+console.log(items);
+
+    for(let i = 0; i <= 2; i++){
+   var productos =   '<div class="producto">\n'+
+   ' <img class="imgProducto" src="/rsrcs/productos/'+items[i].route_image+'" alt="">\n'+
+   ' <h5>'+items[i].name+'</h5>\n'+
+   ' <p>'+items[i].description+'</p>\n'+
+   ' <p>Precio: $'+items[i].price+'</p>\n'+
+   '   </div>\n';
+    const itemsContainer = document.getElementById("list-itemsN");
+    itemsContainer.innerHTML += productos;
+    }
+    
+}
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  /* const itemHTML =   '<div class="producto">\n'+
  ' <img class="imgProducto" src="'+item.img+'" alt="">\n'+
  ' <h5>'+item.name+'</h5>\n'+
  ' <p>'+item.description+'</p>\n'+
  '   </div>\n';
   const itemsContainer = document.getElementById("list-itemsN");
-  itemsContainer.innerHTML += itemHTML;
-}
+  itemsContainer.innerHTML += itemHTML;  */
 
-  addItem({'name':'Macarron',
+/*   addItem({'name':'Macarron',
   'img':'/rsrcs/productos/maca.jpg',
   'description':'Suave pastelillo conformado de dos dulces galletas con una deliciosa crema casera en medio.'});
 
@@ -18,6 +65,5 @@ function addItem(item){
 
   addItem({'name':'Pay',
   'img':'/rsrcs/productos/pay.jpg',
-  'description':'Fina base de galleta molida, con relleno de queso crema y un ligero toque de limon cubierta con frutos de temporada.'});
-
-  a
+  'description':'Fina base de galleta molida, con relleno de queso crema y un ligero toque de limon cubierta con frutos de temporada.'}); */
+  
