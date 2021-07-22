@@ -19,3 +19,5 @@ function addItem(item){
   addItem({'name':'Pay',
   'img':'/rsrcs/productos/pay.jpg',
   'description':'Fina base de galleta molida, con relleno de queso crema y un ligero toque de limon cubierta con frutos de temporada.'});
+
+  a
