@@ -16,7 +16,7 @@ console.log(items);
    ' <img class="imgProducto" src="/rsrcs/productos/'+items[i].route_image+'" alt="">\n'+
    ' <h5>'+items[i].name+'</h5>\n'+
    ' <p>'+items[i].description+'</p>\n'+
-   ' <p>Precio: $'+items[i].price+'</p>\n'+
+   ' <p>Precio: $'+items[i].price+' MXN</p>\n'+
    '   </div>\n';
     const itemsContainer = document.getElementById("list-itemsN");
     itemsContainer.innerHTML += productos;
